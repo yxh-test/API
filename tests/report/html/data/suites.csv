@@ -1,0 +1,7 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Thu Sep 17 16:50:31 CST 2020","Thu Sep 17 16:50:31 CST 2020","112","","test_login_token_book","","","","test_login_book[datas2]","将前置执行测试用例封装成函数放在了operationExcel"
+"broken","Thu Sep 17 16:50:30 CST 2020","Thu Sep 17 16:50:30 CST 2020","41","","test_login_token_book","","","","test_login_book[datas0]","将前置执行测试用例封装成函数放在了operationExcel"
+"passed","Thu Sep 17 16:50:30 CST 2020","Thu Sep 17 16:50:31 CST 2020","114","","test_login_token_book","","","","test_login_book[datas1]","将前置执行测试用例封装成函数放在了operationExcel"
+"passed","Thu Sep 17 16:50:31 CST 2020","Thu Sep 17 16:50:31 CST 2020","111","","test_login_token_book","","","","test_login_book[datas5]","将前置执行测试用例封装成函数放在了operationExcel"
+"passed","Thu Sep 17 16:50:31 CST 2020","Thu Sep 17 16:50:31 CST 2020","116","","test_login_token_book","","","","test_login_book[datas3]","将前置执行测试用例封装成函数放在了operationExcel"
+"passed","Thu Sep 17 16:50:31 CST 2020","Thu Sep 17 16:50:31 CST 2020","116","","test_login_token_book","","","","test_login_book[datas4]","将前置执行测试用例封装成函数放在了operationExcel"

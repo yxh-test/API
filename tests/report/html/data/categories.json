@@ -1,0 +1,26 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "name" : "categories",
+  "children" : [ {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "KeyError: 0",
+      "children" : [ {
+        "name" : "test_login_book[datas0]",
+        "uid" : "71fa505b8cc9db06",
+        "parentUid" : "96408a9587838e63d7f9e1c34f23415f",
+        "status" : "broken",
+        "time" : {
+          "start" : 1600332630839,
+          "stop" : 1600332630880,
+          "duration" : 41
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'测试用例ID': 'login', '模块': '登录', '接口名称': '登录授权', '请求地址': 'http://127.0.0.1:5000/auth', '前置条件': '', '请求方法': 'post', '请求参数类型': '', '请求参数': '{\"username\":\"wuya\",\"password\":\"asd888\"}', '期望结果': '', '是否运行': 'y', '请求头': '', '状态码': 200.0}" ]
+      } ],
+      "uid" : "96408a9587838e63d7f9e1c34f23415f"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  } ]
+}

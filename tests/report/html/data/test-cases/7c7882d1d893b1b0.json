@@ -1,0 +1,156 @@
+{
+  "uid" : "7c7882d1d893b1b0",
+  "name" : "test_login_book[datas1]",
+  "fullName" : "test_login_token_book#test_login_book",
+  "historyId" : "6115743db8cb84428b1a6f281f808c58",
+  "time" : {
+    "start" : 1600332630984,
+    "stop" : 1600332631098,
+    "duration" : 114
+  },
+  "description" : "将前置执行测试用例封装成函数放在了operationExcel",
+  "descriptionHtml" : "<p>将前置执行测试用例封装成函数放在了operationExcel</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "_skip_sensitive",
+    "time" : {
+      "start" : 1600332630983,
+      "stop" : 1600332630983,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "sensitive_url",
+    "time" : {
+      "start" : 1600332630838,
+      "stop" : 1600332630838,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "_verify_url",
+    "time" : {
+      "start" : 1600332630837,
+      "stop" : 1600332630837,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "base_url",
+    "time" : {
+      "start" : 1600332630837,
+      "stop" : 1600332630837,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "test_login_token_book"
+  }, {
+    "name" : "host",
+    "value" : "DADI--20171020J"
+  }, {
+    "name" : "thread",
+    "value" : "3944-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_login_token_book"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "datas",
+    "value" : "{'测试用例ID': 'book_001', '模块': '书籍管理系统', '接口名称': '获取所有书籍', '请求地址': 'http://127.0.0.1:5000/v1/api/books', '前置条件': 'login', '请求方法': 'get', '请求参数类型': '', '请求参数': '', '期望结果': 'Python接口自动化测试实战', '是否运行': 'y', '请求头': '{\"Authorization\":\"JWT {token}\"}', '状态码': 200.0}"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "b8e6c19aa6f5eed3",
+      "status" : "passed",
+      "time" : {
+        "start" : 1600330760833,
+        "stop" : 1600330760952,
+        "duration" : 119
+      }
+    }, {
+      "uid" : "2011c1c10a90bada",
+      "status" : "broken",
+      "statusDetails" : "requests.exceptions.ConnectionError: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /auth (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000000005085588>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。',))",
+      "time" : {
+        "start" : 1600330673070,
+        "stop" : 1600330674196,
+        "duration" : 1126
+      }
+    }, {
+      "uid" : "f3f885a79a6e0211",
+      "status" : "passed",
+      "time" : {
+        "start" : 1600328890756,
+        "stop" : 1600328890891,
+        "duration" : 135
+      }
+    }, {
+      "uid" : "c767ded1c493118f",
+      "status" : "passed",
+      "time" : {
+        "start" : 1600328714457,
+        "stop" : 1600328714627,
+        "duration" : 170
+      }
+    }, {
+      "uid" : "cd04abb4f7766bd2",
+      "status" : "passed",
+      "time" : {
+        "start" : 1600328498199,
+        "stop" : 1600328498392,
+        "duration" : 193
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "7c7882d1d893b1b0.json",
+  "parameterValues" : [ "{'测试用例ID': 'book_001', '模块': '书籍管理系统', '接口名称': '获取所有书籍', '请求地址': 'http://127.0.0.1:5000/v1/api/books', '前置条件': 'login', '请求方法': 'get', '请求参数类型': '', '请求参数': '', '期望结果': 'Python接口自动化测试实战', '是否运行': 'y', '请求头': '{\"Authorization\":\"JWT {token}\"}', '状态码': 200.0}" ]
+}

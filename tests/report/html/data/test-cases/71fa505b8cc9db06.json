@@ -1,0 +1,162 @@
+{
+  "uid" : "71fa505b8cc9db06",
+  "name" : "test_login_book[datas0]",
+  "fullName" : "test_login_token_book#test_login_book",
+  "historyId" : "6eba89be57aaa519c6c26b29871e1dd6",
+  "time" : {
+    "start" : 1600332630839,
+    "stop" : 1600332630880,
+    "duration" : 41
+  },
+  "description" : "将前置执行测试用例封装成函数放在了operationExcel",
+  "descriptionHtml" : "<p>将前置执行测试用例封装成函数放在了operationExcel</p>\n",
+  "status" : "broken",
+  "statusMessage" : "KeyError: 0",
+  "statusTrace" : "datas = {'前置条件': '', '接口名称': '登录授权', '是否运行': 'y', '期望结果': '', ...}\n\n    @pytest.mark.parametrize('datas',excel.runs())\n    \n    def test_login_book(datas):\n    \n    \t\"\"\"将前置执行测试用例封装成函数放在了operationExcel\"\"\"\n    \n    \tdef case_assert_result(r):\n    \t\t\"\"\"封装断言\"\"\"\n    \t\tassert datas[ExcelVar.statusCode] == r.status_code\n    \t\tassert datas[ExcelVar.expect] in json.dumps(r.json(), ensure_ascii=False)\n    \n    \tdef ReUrl():\n    \t\t# 上下参数关联，添加数据的bookID，后面要查看、修改、删除此bookID的书籍，因此，url需要替换掉bookID，用函数封装\n    \t\turl = str(datas[ExcelVar.caseUrl]).replace('{bookID}', readContent())\n    \t\treturn url\n    \n    \n    \tif datas[ExcelVar.method]=='get':\n    \t\tif 'books' in datas[ExcelVar.caseUrl]:\n    \t\t\tr = obj.get(url=datas[ExcelVar.caseUrl],\n    \t\t\t            headers=excel.runPreCase(datas[ExcelVar.casePre],datas[ExcelVar.headers]))\n    \t\t\tcase_assert_result(r=r)\n    \t\telse:\n    \t\t\tr = obj.get(url=ReUrl(),\n    \t\t\t            headers=excel.runPreCase(datas[ExcelVar.casePre],datas[ExcelVar.headers]))\n    \t\t\tcase_assert_result(r=r)\n    \n    \n    \telif datas[ExcelVar.method]=='post':\n    \t\tr = obj.post(url=datas[ExcelVar.caseUrl],\n    \t\t            json = excel.params(datas[ExcelVar.params]),\n    \t\t            headers=excel.runPreCase(datas[ExcelVar.casePre],datas[ExcelVar.headers])) # 登录没有请求头，但是这个headers在这会干扰，在登录时也会执行前置测试点\n    \n    \t\t# 将bookID写到文件中\n>   \t\twriteContent(content=r.json()[0]['datas']['id'])\nE     KeyError: 0\n\ntest_login_token_book.py:46: KeyError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "sensitive_url",
+    "time" : {
+      "start" : 1600332630838,
+      "stop" : 1600332630838,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "_skip_sensitive",
+    "time" : {
+      "start" : 1600332630838,
+      "stop" : 1600332630838,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "_verify_url",
+    "time" : {
+      "start" : 1600332630837,
+      "stop" : 1600332630837,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "base_url",
+    "time" : {
+      "start" : 1600332630837,
+      "stop" : 1600332630837,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "test_login_token_book"
+  }, {
+    "name" : "host",
+    "value" : "DADI--20171020J"
+  }, {
+    "name" : "thread",
+    "value" : "3944-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_login_token_book"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "datas",
+    "value" : "{'测试用例ID': 'login', '模块': '登录', '接口名称': '登录授权', '请求地址': 'http://127.0.0.1:5000/auth', '前置条件': '', '请求方法': 'post', '请求参数类型': '', '请求参数': '{\"username\":\"wuya\",\"password\":\"asd888\"}', '期望结果': '', '是否运行': 'y', '请求头': '', '状态码': 200.0}"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "8c8f689ad75b472d",
+      "status" : "passed",
+      "time" : {
+        "start" : 1600330760675,
+        "stop" : 1600330760788,
+        "duration" : 113
+      }
+    }, {
+      "uid" : "3a854873f9bca6e9",
+      "status" : "broken",
+      "statusDetails" : "requests.exceptions.ConnectionError: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /auth (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000000004F1B4E0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。',))",
+      "time" : {
+        "start" : 1600330671199,
+        "stop" : 1600330672399,
+        "duration" : 1200
+      }
+    }, {
+      "uid" : "1e3d98d637defc56",
+      "status" : "passed",
+      "time" : {
+        "start" : 1600328890617,
+        "stop" : 1600328890749,
+        "duration" : 132
+      }
+    }, {
+      "uid" : "9281ec6b8ebbc704",
+      "status" : "passed",
+      "time" : {
+        "start" : 1600328714242,
+        "stop" : 1600328714379,
+        "duration" : 137
+      }
+    }, {
+      "uid" : "c110b050933ab6b9",
+      "status" : "passed",
+      "time" : {
+        "start" : 1600328496435,
+        "stop" : 1600328498194,
+        "duration" : 1759
+      }
+    } ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "71fa505b8cc9db06.json",
+  "parameterValues" : [ "{'测试用例ID': 'login', '模块': '登录', '接口名称': '登录授权', '请求地址': 'http://127.0.0.1:5000/auth', '前置条件': '', '请求方法': 'post', '请求参数类型': '', '请求参数': '{\"username\":\"wuya\",\"password\":\"asd888\"}', '期望结果': '', '是否运行': 'y', '请求头': '', '状态码': 200.0}" ]
+}
